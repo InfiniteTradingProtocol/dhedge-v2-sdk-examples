@@ -49,7 +49,7 @@ tradeRouter.get("/trade", async (req: Request, res: Response) => {
     if (share) {
       tradeAmount = balance.mul(share).div(100);
     } else if (amount) {
-      tradeAmount = ethers.BigNumber.from(amount);
+      tradeAmount =  ethers.utils.parseEther(amount);
       if (tradeAmount.gt(balance)) tradeAmount === balance;
     } else {
       throw "share or amount missing";

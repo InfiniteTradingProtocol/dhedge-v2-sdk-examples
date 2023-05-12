@@ -10,9 +10,9 @@ export const wallet = (network: Network): ethers.Wallet => {
       break;
     case "optimism":
       url = `https://optimism-mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`;
+      break;
     case "arbitrum":
       url = `https://arbitrum-mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`;
-      break;
       break;
     default:
       throw Error("network not supported");

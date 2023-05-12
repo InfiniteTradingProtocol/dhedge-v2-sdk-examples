@@ -3,7 +3,6 @@ import { Router } from "express";
 
 const adminRouter = Router();
 import { Request, Response } from "express";
-import { poolAddress } from "../config";
 import { dhedge } from "../dhedge";
 
 adminRouter.post("/createPool", async (req: Request, res: Response) => {
